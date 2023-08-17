@@ -1,11 +1,15 @@
 # Uber-Rides-Data-Analysis
 
+**DATASET**
+The datasets are provided in parts because of the upload size constraints. Each of the datasets consists of the date, longitudinal value, latitudinal value. 
+
+
 The provided code demonstrates a Python script for performing a variety of data analysis and visualization tasks using Uber ride data. Let's break down the code into different sections and provide explanations for each one:
 
 **Data Loading and Preparation:**
-The script begins by importing the necessary libraries and loading Uber ride data from multiple CSV files representing different months (April to September) of the year 2014 into separate DataFrames (apr14, may14, jun14, jul14, aug14, sep14). These DataFrames are then concatenated into a single DataFrame named merged_df.
+The script begins by importing the necessary libraries and loading Uber ride data from multiple CSV files representing different months (April to September) of the year 2014 into separate DataFrames (apr 14, may 14, jun 14, JUL 14, aug 14, sep 14). These DataFrames are then concatenated into a single DataFrame named merged_df.
 
-The 'Date/Time' column of each DataFrame is converted to a datetime format using the pd.to_datetime() function.
+The 'Date/Time' column of each DataFrame is converted to a DateTime format using the pd.to_datetime() function.
 
 **Data Visualization - Histogram of Time:**
 A histogram of the time of day when Uber rides occurred is created. The script extracts the time component from the 'Date/Time' column and generates a new column 'Time', which represents the time of day in seconds. The Seaborn library is used to create a histogram plot of the 'Time' column.
@@ -16,7 +20,7 @@ The code filters the current_df DataFrame to create two new DataFrames - morning
 **Data Visualization on Maps using Folium:**
 The Folium library is employed to visualize the Uber ride data on interactive maps.
 
-**Morning Map:** A map is generated with a specific center location, and circular markers are added for a subset of morning Uber ride coordinates. These markers indicate the pickup locations of morning rides.
+**Morning Map:** A map with a specific center location is generated, and circular markers are added for a subset of morning Uber ride coordinates. These markers indicate the pickup locations of morning rides.
 
 **Evening Map:** Similarly, another map is created for evening rides, and red circular markers are used to highlight evening ride pickup locations.
 
